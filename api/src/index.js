@@ -22,6 +22,10 @@ app.use(personRoutes);
 app.use(muniRoutes);
 app.use(depaRoutes);
 
+app.get('/', function (req, res) {
+    var responseText = 'API PARA BASES';
+    res.send(responseText);
+  });
 
 //run
 app.listen(app.get('port'), () => {
