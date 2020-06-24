@@ -4,7 +4,10 @@ const cors = require('cors');
 const app = express();
 
 //imports
-const personRoutes = require('./routes/person-rotes');
+const personRoutes = require('./routes/persona');
+const muniRoutes = require('./routes/municipio');
+const depaRoutes = require('./routes/departamento');
+
 
 //settings
 app.set('port', 3000);
@@ -16,7 +19,8 @@ app.use(express.urlencoded({ extended: false }));
 
 //routes
 app.use(personRoutes);
-
+app.use(muniRoutes);
+app.use(depaRoutes);
 
 
 //run
